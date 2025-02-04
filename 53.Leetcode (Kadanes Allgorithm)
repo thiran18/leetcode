@@ -1,0 +1,17 @@
+//Kadanes Allgorithm
+
+//To Find Maximum Sum Of The Sub-Array
+
+
+class Solution {
+    int maxSubarraySum(int[] arr) {
+        // Your code here
+        int res=arr[0];int MaxEnd=arr[0];
+        for(int i=1;i<arr.length;i++){
+            MaxEnd=Math.max(MaxEnd+arr[i],arr[i]);
+            
+             res=Math.max(res,MaxEnd);
+        }
+        return res;
+    }
+}
